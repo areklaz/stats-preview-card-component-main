@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(233, 47%, 7%);
+}
+
+.attribution {
+    display: block;
+    bottom: 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 2rem 1rem;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 15px;
+    overflow: hidden;
+
+    &__hero-img {
+        min-height: 250px;
+        background-image: url('../images/image-header-mobile.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__main {
+        padding: 3rem;
+    }
+
+    &__main-title {
+        text-align: center;
+        font-size: 2.6rem;
+        font-weight: 500;
+        color: hsl(0, 0%, 100%);
+
+        span {
+            color: hsl(277, 64%, 61%);
+        }
+    }
+
+    &__main-text {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 15px;
+        line-height: 2.5rem;
+        font-weight: 400;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    &__stats {
+        padding: 3rem 0;
+        text-align: center;
+    }
+
+    &__stats-heading {
+        font-size: 2.6rem;
+        color: hsl(0, 0%, 100%);
+    }
+
+    &__stats-name {
+        margin-top: 1rem;
+        text-transform: uppercase;
+
+        font-size: 1.4rem;
+        color: hsla(0, 0%, 100%, 0.6);
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    .card {
+        flex-direction: row;
+        max-width: 1200px;
+        width: 1200px;
+        height: 450px;
+
+        &__hero-img {
+            width: 50%;
+            order: 1;
+            background-image: url('../images/image-header-desktop.jpg');
+        }
+
+        &__main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 6rem;
+            width: 50%;
+        }
+
+        &__main-title {
+            font-size: 4rem;
+            text-align: left;
+        }
+
+        &__main-text {
+            margin-top: 0;
+            padding-bottom: 4rem;
+            padding-right: 6rem;
+            font-size: 1.6rem;
+            text-align: left;
+        }
+
+        &__stats {
+            padding: 0 6rem 0 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        font-size: 11px;
+        text-align: center;
+    }
+}
